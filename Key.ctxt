@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Key
+comment1.params=keyName\ soundFile\ keyNotPressed\ keyPressed
+comment1.target=Key(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Create\ a\ new\ key.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ act\ checks\ to\ see\ whether\ the\ piano\ key\ is\ down\ and\ whether\ the\ user\ is\ \r\n\ is\ pressing\ a\ keyboard\ key\ and\ if\ so\ plays\ the\ appropriate\ key.\r\n\ also\ changes\ the\ image\ so\ that\ it\ looks\ like\ the\ key\ is\ pressed\ down\r\n\r\n\ @param\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment3.params=
+comment3.target=void\ play()
+comment3.text=\r\n\ play\ intializes\ the\ sound\ that\ the\ piano\ key\ has\ to\ play\ \r\n\ and\ the\ sound\ that\ each\ piano\ key\ is\ responsible\ for\r\n\ \r\n\ @param\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+numComments=4

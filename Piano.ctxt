@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Piano
+comment1.params=
+comment1.target=Piano()
+comment2.params=
+comment2.target=void\ makeKeys()
+comment2.text=\r\n\ makeKeys\ adds\ key\ objects\ to\ the\ world\r\n\ \r\n\ @param\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+numComments=3
