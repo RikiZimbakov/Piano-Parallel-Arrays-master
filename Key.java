@@ -56,5 +56,17 @@ public class Key extends Actor
     {
         Greenfoot.playSound(sound + ".wav");
     }
+
+    /**
+     * checkDown simply returns isDown 
+     * 
+     * @param There are No parameters
+     * @return isDown is returned because we need to check if different keys
+     * are pressed each time 
+     */
+    public boolean checkDown()
+    {
+        return isDown;
+    }
 }
 
