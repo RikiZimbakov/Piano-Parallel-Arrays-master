@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 public class Piano extends World
 {
     private String[] whiteKeys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]"};
-    private String[] whiteNotes = {"3c", "3d", "3e", "3f", "3g", "3a", "3b", "4c", "4d", "4e", "4f", "4g"};
+    private String[] whiteNotes = {"3c", "3d", "3e", "3f", "3g", "3a","3b", "4c", "4d", "4e", "4f", "4g"};
     private String[] blackKeys = {"2", "3","", "5", "6", "7","", "9", "0","", "="}; 
     private String[] blackNotes= {"3c#", "3d#","", "3f#", "3g#", "3a#","", "4c#", "4d#","", "4f#"};
 
@@ -109,6 +109,7 @@ public class Piano extends World
         else if( numAllDown == 3)
         {
             checkForTriads(keyDownLocations);
+            checkForInvertedTriads(keyDownLocations);
         }
         else if( numAllDown == 4)
         {
@@ -124,7 +125,7 @@ public class Piano extends World
      * checkForSeconds sees whether one or more downKeys is pressed down and
      * if so displays text showing the user that they play a second
      * 
-     * @param an integer array that checks if the correct keys to 
+     * @param an integer array downKeys that checks if the correct keys to 
      * make a second are pressed 
      * @return Nothing is returned
      */
@@ -140,7 +141,7 @@ public class Piano extends World
      * checkForTriads sees whether a combination of keys is pressed down and
      * if so displays text showing the user that they played a traid
      * 
-     * @param an integer array that checks if the correct keys to 
+     * @param an integer array downKeys that checks if the correct keys to 
      * make a triad are pressed 
      * @return Nothing is returned
      */
@@ -158,7 +159,7 @@ public class Piano extends World
      * checkForSevenths sees whether a even bigger combination of keys is pressed down and
      * if so displays text showing the user that they played a seventh
      * 
-     * @param an integer array that checks if the correct keys to 
+     * @param an integer array downKeys that checks if the correct keys to 
      * make a seventh are pressed 
      * @return Nothing is returned
      */
@@ -169,6 +170,24 @@ public class Piano extends World
         downKeys[0] + 3 == downKeys[1] && downKeys[1] + 3 == downKeys[2] && downKeys[2] + 3 == downKeys[3] )
         {
             showText("You have made a seventh", getWidth()/2, 50);
+        }
+    }
+    
+    /**
+     * checkForInvertedTriads sees whether a combination of keys is pressed down and
+     * if so displays text showing the user that they played an inverted traid
+     * 
+     * @param an integer array downKeys that checks if the correct keys to 
+     * make an inverted triad are pressed 
+     * @return Nothing is returned
+     */
+    private void checkForInvertedTriads(int[] downKeys)
+    {
+        if( downKeys[0] + 3 == downKeys[1] && downKeys[1] + 5 == downKeys[2] ||
+        downKeys[0] + 5 == downKeys[1] && downKeys[1] + 4 == downKeys[2] ||
+        downKeys[0] + 4 == downKeys[1] && downKeys[1] + 5 == downKeys[2] )
+        {
+            showText("You have made a inverted triad", getWidth()/2, 50);
         }
     }
 }
